@@ -20,11 +20,11 @@ Wenhao: Problem solving, communication, experience
 
 Garfield: Problem solving, communication, team player
 
-1. How can you best utilize these strengths in the execution of your project?
+2. How can you best utilize these strengths in the execution of your project?
 
 We will be able to assist each other when we are struggling and speak up if we need assistance. We’ll be able to utilize each other’s strengths in communicating.
 
-1. In which professional competencies do you each want to develop greater strength?
+3. In which professional competencies do you each want to develop greater strength?
 
 Daniel: I would like to improve on all aspects of coding.
 
@@ -34,7 +34,7 @@ Wenhao: Explaining thoughts using right terminology.
 
 Garfield: I would like to understand front-end concepts more.
 
-1. Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
+4. Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
 
 We plan on utilizing pair and mob programming. Switching between drive - navigator roles after a specified amount of time. Achieve MVPs first, if we have time we’ll come back and refactor. Refactor each other’s code if necessary.
 
@@ -48,19 +48,19 @@ Describe at least:
 
 Communication is key. Attempt to handle any and all issues at the lowest level possible. If this doesn’t work, we will escalate it to Michelle.
 
-1. What will your team do if one person is taking over the project and not letting the other members contribute?
+2. What will your team do if one person is taking over the project and not letting the other members contribute?
 
 Address it with the person in question, and discuss it as a group. We all want to succeed!
 
-1. How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
+3. How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
 
 We will attempt to explain and attempt to make it understandable for each person.
 
-1. How will you raise concerns to members who are not adequately contributing?
+4. How will you raise concerns to members who are not adequately contributing?
 
 Communicate any and all issues as a group, remembering nothing is personal, it is for the betterment of the team.
 
-1. How and when will you escalate the conflict if your resolution attempts are unsuccessful?
+5. How and when will you escalate the conflict if your resolution attempts are unsuccessful?
 
 After addressing it at the lowest level possible, if unsuccessful we will escalate and involve our instructor.
 
@@ -74,27 +74,27 @@ Describe at least:
 
 We will all be present and available during class hours. Outside of class hours we will communicate via Slack messaging.
 
-1. What platforms will you use to communicate (ie. Slack, phone …)?
+2. What platforms will you use to communicate (ie. Slack, phone …)?
 
 Slack and Remo
 
-1. How often will you take breaks?
+3. How often will you take breaks?
 
 10 minutes every hour, similar to class structure.
 
-1. What is your plan if you start to fall behind?
+4. What is your plan if you start to fall behind?
 
 Per everyone’s availability, if we are falling behind we will attempt to meet outside of class hours.
 
-1. How will you communicate after hours and on the weekend?
+5. How will you communicate after hours and on the weekend?
 
 Via Slack
 
-1. What is your strategy for ensuring everyone’s voice is heard?
+6. What is your strategy for ensuring everyone’s voice is heard?
 
 Communicate and listen.
 
-1. How will you ensure that you are creating a safe environment where everyone feels comfortable speaking up?
+7. How will you ensure that you are creating a safe environment where everyone feels comfortable speaking up?
 
 By respecting everyone’s input.
 
@@ -108,7 +108,7 @@ Describe at least:
 
 By working in pairs, or via mob programming and remaining in constant communication with each other.
 
-1. What project management tool will be used?
+2. What project management tool will be used?
 
 Trello
 
@@ -122,28 +122,28 @@ Describe at least:
 
 All of it (except .env)
 
-1. How will you share the repository with your teammates?
+2. How will you share the repository with your teammates?
 
 Add teammates as collaborators or create organization
 
-1. What is your Git flow?
+3. What is your Git flow?
 
 One person owns repo, and code has to be approved by two or more members. Make a dev branch and make dev default to protect the main branch. Everyone works off dev branch, and work on features then PR.
 
-1. Will you be using a PR review workflow? If so, consider:
+4. Will you be using a PR review workflow? If so, consider:
 
    1. How many people must review a PR?
 
    Two team members.
 
-   1. Who merges PRs?
+   2. Who merges PRs?
 
    Whoever makes features will merge.
 
-   1. How often will you merge?
+   3. How often will you merge?
 
    After features are complete.
 
-   1. How will you communicate that it’s time to merge?
+   4. How will you communicate that it’s time to merge?
 
    Via Slack
