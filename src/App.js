@@ -29,7 +29,7 @@ class App extends React.Component {
     return (
       <>
         <Header isAuthenticated={isAuthenticated} />
-        <Main />
+        <Main businesses={this.state.businesses} />
         <Footer />
       </>
     )

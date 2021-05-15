@@ -1,11 +1,18 @@
 import React from 'react';
-import Cards from './Cards';
+import Business from './Business';
+import { Container, CardColumns } from 'react-bootstrap';
+
 class Main extends React.Component {
   render() {
     return (
       <>
         <h1>This is Main</h1>
-        <Cards />
+        <Container>
+          <CardColumns>
+            {this.props.businesses.map(business =>
+              <Business business={business} />)}
+          </CardColumns>
+        </Container>
       </>
     )
   }
