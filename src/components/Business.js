@@ -9,10 +9,9 @@ class Business extends React.Component {
         <Card.Img variant="top" src={business.image_url} />
         <Card.Body>
           <Card.Title>{business.name}</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-            </Card.Text>
+          <Card.Text>{business.location.display_address.join(' ')}</Card.Text>
+          <Card.Text>{business.price}</Card.Text>
+          <Card.Text>{`rating: ${business.rating}`}</Card.Text>
         </Card.Body>
       </Card>
     )
