@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
+
 export default class BusinessCarousel extends React.Component {
   render() {
     return (
