@@ -7,7 +7,7 @@ class BusinessColumns extends React.Component {
     return (
       <Container>
         <CardColumns>
-          {this.props.businesses.map((business, i) => <Business key={i} business={business} />)}
+          {this.props.businesses.map((business, i) => <Business key={i} business={business} handleShowcard={this.props.handleShowcard}/>)}
         </CardColumns>
       </Container>
     )
