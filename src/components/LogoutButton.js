@@ -1,16 +1,14 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from 'react-bootstrap';
 
 const LogoutButton = () => {
-  const { logout, isAuthenticated } = useAuth0();
-
-  return isAuthenticated && (
-    <button onClick={() => logout({ returnTo: window.location.origin })}>
+  const { logout } = useAuth0();
+  return (
+    <Button variant="primary" onClick={() => logout({ returnTo: window.location.origin })}>
       Log Out
-    </button>
+    </Button>
   );
 };
 
 export default LogoutButton;
-
-//this code came from Auth0 Quick Start
