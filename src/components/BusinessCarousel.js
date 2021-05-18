@@ -16,10 +16,6 @@ class BusinessCarousel extends React.Component {
                     src={photo}
                     alt="First slide"
                   />
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Place holder</p>
-                  </Carousel.Caption>
                 </Carousel.Item>
               )}
             </Carousel>

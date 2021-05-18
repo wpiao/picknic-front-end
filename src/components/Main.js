@@ -1,7 +1,7 @@
 import React from 'react';
 import BusinessColumns from './BusinessColumns.js';
-import BusinessCarousel from './BusinessCarousel.js'
-import SearchBar from './SearchBar';
+import BusinessDetail from './BusinessDetail.js'
+import SearchBar from './SearchBar.js';
 
 class Main extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Main extends React.Component {
           term={this.props.term}
           location={this.props.location}
         />
-        <BusinessCarousel
+        <BusinessDetail
           business={this.props.business}
         />
         <BusinessColumns
