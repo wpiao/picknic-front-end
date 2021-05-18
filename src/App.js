@@ -12,7 +12,8 @@ class App extends React.Component {
     this.state = {
       businesses: [],
       location: '',
-      term: ''
+      term: '',
+      business: {}
     }
   }
 
@@ -24,9 +25,10 @@ class App extends React.Component {
 
   handleShowcard = async (id) => {
     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/business/${id}`);
-    console.log(res);
+    this.setState({
+      business: res.data
+    });
   }
-
 
   componentDidMount = () => {
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/yelp`)
@@ -70,6 +72,7 @@ class App extends React.Component {
           term={this.state.term}
           location={this.state.location}
           handleShowcard={this.handleShowcard}
+          business={this.state.business}
         />
         <Footer />
       </>

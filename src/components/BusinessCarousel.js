@@ -1,24 +1,35 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Container } from 'react-bootstrap';
 
-
-export default class BusinessCarousel extends React.Component {
+class BusinessCarousel extends React.Component {
   render() {
+    const business = this.props.business;
     return (
-      <Carousel>
-        <Carousel.Item style={{ width: '25rem' }}>
-          <img
-            fluid
-            src="https://via.placeholder.com/150"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Place holder</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-
+      <>
+        {business.photos ?
+          <Container>
+            <Carousel>
+              {business.photos.map((photo, i) =>
+                <Carousel.Item key={i}>
+                  <img
+                    className="d-block w-100"
+                    src={photo}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>Place holder</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              )}
+            </Carousel>
+          </Container>
+          :
+          ''
+        }
+      </>
     )
   }
 }
+
+export default BusinessCarousel;

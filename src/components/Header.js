@@ -1,14 +1,20 @@
 import React from 'react';
-import LoginButton from './LoginButton';
-import LogoutButton from './LogoutButton';
+import LoginButton from './LoginButton.js';
+import LogoutButton from './LogoutButton.js';
+import { Navbar, Nav } from 'react-bootstrap';
 
 class Header extends React.Component {
   render() {
     return (
-      <>
-        <h1>This is Header</h1>
-        {this.props.isAuthenticated ? <LogoutButton /> : <LoginButton />}
-      </>
+      <header>
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand href="#home">PICKNIC</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+          </Nav>
+          {this.props.isAuthenticated ? <LogoutButton /> : <LoginButton />}
+        </Navbar>
+      </header>
     )
   }
 }
