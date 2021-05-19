@@ -25,6 +25,7 @@ class Main extends React.Component {
           <Route exact path="/business/:id">
             <BusinessDetail
               business={this.props.business}
+              handleSave={this.props.handleSave}
             />
           </Route>
           <Route exact path="/profile">
