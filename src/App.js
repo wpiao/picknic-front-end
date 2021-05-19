@@ -60,6 +60,15 @@ class App extends React.Component {
     }
   };
 
+  handleSave = () => {
+    const body = {};
+    body.email = this.props.auth0.user.email;
+    body.business = this.state.business;
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/business/save`, body)
+      .then(res => console.log('save', res))
+      .catch(error => console.log(error))
+  }
+
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
@@ -73,6 +82,7 @@ class App extends React.Component {
           location={this.state.location}
           handleShowcard={this.handleShowcard}
           business={this.state.business}
+          handleSave={this.handleSave}
         />
         <Footer />
       </>

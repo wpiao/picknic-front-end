@@ -8,7 +8,7 @@ class BusinessDetail extends React.Component {
     return (
       <>
         <BusinessCarousel business={this.props.business} />
-        <Button className="primary">Save</Button>
+        <Button className="primary" onClick={this.props.handleSave}>Save</Button>
         <Button className="primary">Rate</Button>
         <BusinessInfo business={this.props.business}
         />
