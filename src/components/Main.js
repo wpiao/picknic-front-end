@@ -29,7 +29,11 @@ class Main extends React.Component {
             />
           </Route>
           <Route exact path="/profile">
-            <Profile />
+            <Profile
+              savedBusinesses={this.props.savedBusinesses}
+              getBusinessInfo={this.props.getBusinessInfo}
+              business={this.props.businesses}
+            />
           </Route>
         </Switch>
       </>

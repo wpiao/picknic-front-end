@@ -13,7 +13,8 @@ class App extends React.Component {
       businesses: [],
       location: '',
       term: '',
-      business: {}
+      business: {},
+      savedBusinesses: []
     }
   }
 
@@ -69,12 +70,26 @@ class App extends React.Component {
       .catch(error => console.log(error))
   }
 
+  getFavoriteBusiness = () => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/business/profile?email=${this.props.auth0.user.email}`)
+    .then(businessData => {
+      console.log(businessData.data, 'working');
+      this.setState({
+        savedBusinesses: businessData.data
+      })
+    })
+    .catch(err => console.log(err))
+  }
+
+
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
       <>
         <Header isAuthenticated={isAuthenticated} />
         <Main
+          savedBusinesses={this.state.savedBusinesses}
+          getBusinessInfo={this.getFavoriteBusiness}
           businesses={this.state.businesses}
           handleOnChange={this.handleOnChange}
           handleSubmit={this.getBusinessData}
