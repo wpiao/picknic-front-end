@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
                 <Form.Control required name="term" placeholder="Keyword" onChange={e => this.props.handleOnChange(e)} value={this.props.term} />
               </Col>
               <Col xs={5} className="pl-0 pr-0">
-                <Form.Control required sname="location" placeholder="City, State" onChange={e => this.props.handleOnChange(e)} value={this.props.location} />
+                <Form.Control required name="location" placeholder="City, State" onChange={e => this.props.handleOnChange(e)} value={this.props.location} />
               </Col>
               <Col xs={2} className="pl-0">
                 <Button variant="primary" type="submit">Search</Button>

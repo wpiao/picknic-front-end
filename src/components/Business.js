@@ -1,11 +1,18 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom'
 
 class Business extends React.Component {
+  handleClick = () => {
+    const id = this.props.business.id
+    this.props.handleShowcard(id);
+    this.props.history.push(`/business/${id}`)
+  }
+
   render() {
     const business = this.props.business;
     return (
-      <Card onClick={() => this.props.handleShowcard(business.id)}>
+      <Card onClick={this.handleClick}>
         <Card.Img variant="top" src={business.image_url} />
         <Card.Body>
           <Card.Title>{business.name}</Card.Title>
@@ -18,4 +25,4 @@ class Business extends React.Component {
   }
 }
 
-export default Business;
+export default withRouter(Business);
