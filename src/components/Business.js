@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
 class Business extends React.Component {
@@ -20,7 +20,11 @@ class Business extends React.Component {
           <Card.Title>{business.name}</Card.Title>
           <Card.Text>{business.location.display_address.join(' ')}</Card.Text>
           <Card.Text>{business.price}</Card.Text>
-          <Card.Text>{`rating: ${business.rating}`}</Card.Text>
+          <Card.Text>{`Yelp rating: ${business.rating}`}</Card.Text>
+          {(this.props.history.location.pathname === "/profile") ?
+            <Button variant="danger">Delete</Button>
+            : ''
+          }
         </Card.Body>
       </Card>
     )
