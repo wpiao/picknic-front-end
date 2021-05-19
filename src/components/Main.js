@@ -8,15 +8,15 @@ import Profile from './Profile.js';
 class Main extends React.Component {
   render() {
     return (
-      <>
-        <SearchBar
-          handleOnChange={this.props.handleOnChange}
-          handleSubmit={this.props.handleSubmit}
-          term={this.props.term}
-          location={this.props.location}
-        />
+      <main>
         <Switch>
           <Route exact path="/">
+            <SearchBar
+              handleOnChange={this.props.handleOnChange}
+              handleSubmit={this.props.handleSubmit}
+              term={this.props.term}
+              location={this.props.location}
+            />
             <BusinessColumns
               businesses={this.props.businesses}
               handleShowcard={this.props.handleShowcard}
@@ -28,15 +28,17 @@ class Main extends React.Component {
               handleSave={this.props.handleSave}
             />
           </Route>
-          <Route exact path="/profile">
-            <Profile
-              savedBusinesses={this.props.savedBusinesses}
-              getBusinessInfo={this.props.getBusinessInfo}
-              business={this.props.businesses}
-            />
-          </Route>
+          {this.props.isAuthenticated ?
+            <Route exact path="/profile">
+              <Profile
+                savedBusinesses={this.props.savedBusinesses}
+                getFavoriteBusiness={this.props.getFavoriteBusiness}
+              />
+            </Route>
+            : ''
+          }
         </Switch>
-      </>
+      </main>
     )
   }
 }
