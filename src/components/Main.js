@@ -33,6 +33,7 @@ class Main extends React.Component {
               <Profile
                 savedBusinesses={this.props.savedBusinesses}
                 getFavoriteBusiness={this.props.getFavoriteBusiness}
+                handleDelete={this.props.handleDelete}
               />
             </Route>
             : ''
