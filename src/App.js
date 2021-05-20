@@ -82,13 +82,17 @@ class App extends React.Component {
   }
 
   handleDelete = id => {
-    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/business/${id}'`,
+    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/business/${id}`,
       {
         params: {
           email: this.props.auth0.user.email,
         }
       })
-      .then(res => console.log('delete', res.data))
+      .then(res => {
+        this.setState({
+          savedBusinesses: res.data
+        });
+      })
       .catch(err => console.log(err));
   }
 
