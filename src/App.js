@@ -66,7 +66,7 @@ class App extends React.Component {
     body.email = this.props.auth0.user.email;
     body.business = this.state.business;
     axios.post(`${process.env.REACT_APP_BACKEND_URL}/business/save`, body)
-      .then(res => console.log('save', res))
+      .then(res => console.log(res.data))
       .catch(error => console.log(error))
   }
 
@@ -81,6 +81,16 @@ class App extends React.Component {
       .catch(err => console.log(err))
   }
 
+  handleDelete = id => {
+    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/business/${id}'`,
+      {
+        params: {
+          email: this.props.auth0.user.email,
+        }
+      })
+      .then(res => console.log('delete', res.data))
+      .catch(err => console.log(err));
+  }
 
   render() {
     const { isAuthenticated } = this.props.auth0;
@@ -99,6 +109,7 @@ class App extends React.Component {
           handleShowcard={this.handleShowcard}
           business={this.state.business}
           handleSave={this.handleSave}
+          handleDelete={this.handleDelete}
         />
         <Footer />
       </>

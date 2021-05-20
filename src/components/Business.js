@@ -22,7 +22,7 @@ class Business extends React.Component {
           <Card.Text>{business.price}</Card.Text>
           <Card.Text>{`Yelp rating: ${business.rating}`}</Card.Text>
           {(this.props.history.location.pathname === "/profile") ?
-            <Button variant="danger">Delete</Button>
+            <Button variant="danger" onClick={() => this.props.handleDelete(business.id)}>Delete</Button>
             : ''
           }
         </Card.Body>

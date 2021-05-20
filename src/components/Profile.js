@@ -18,6 +18,7 @@ class Profile extends React.Component {
               key={i}
               business={business}
               handleShowcard={this.props.handleShowcard}
+              handleDelete={this.props.handleDelete}
             />)}
         </CardColumns>
       </Container>
