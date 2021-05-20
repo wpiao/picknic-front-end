@@ -15,6 +15,7 @@ class BusinessCarousel extends React.Component {
                     className="d-block w-100"
                     src={photo}
                     alt="First slide"
+                    height={500}
                   />
                 </Carousel.Item>
               )}

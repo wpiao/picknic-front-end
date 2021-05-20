@@ -14,7 +14,7 @@ class Business extends React.Component {
   render() {
     const business = this.props.business;
     return (
-      <Card onClick={this.handleClick}>
+      <Card onClick={this.handleClick} >
         <Card.Img variant="top" src={business.image_url} />
         <Card.Body>
           <Card.Title>{business.name}</Card.Title>

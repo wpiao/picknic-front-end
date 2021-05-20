@@ -4,7 +4,7 @@ import { Form, Col, Row, Button, Container } from 'react-bootstrap'
 class SearchBar extends React.Component {
   render() {
     return (
-      <>
+      <div className="navbar">
         <Container className="my-3">
           <Form onSubmit={this.props.handleSubmit}>
             <Row className="d-flex justify-content-center">
@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
             </Row>
           </Form>
         </Container>
-      </>
+      </div>
     )
   }
 }

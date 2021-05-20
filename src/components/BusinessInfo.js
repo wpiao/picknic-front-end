@@ -3,17 +3,16 @@ import React from 'react';
 class BusinessInfo extends React.Component {
   render() {
     const business = this.props.business;
-    console.log('This is BusinessInfo', business);
     return (
       <>
-        <h1>Hello from BusinessInfo</h1>
         <p>
-          <ul>
-            <li>{business.name}</li>
-            <li>{business.display_phone}</li>
-            <li>{business.location && business.location.display_address.join(', ')}</li>
-            <li>{business.price}</li>
-            <li>{business.transactions}</li>
+          <br/>
+          <ul class="list-group">
+            <li class="list-group-item">{business.name}</li>
+            <li class="list-group-item">{business.display_phone}</li>
+            <li class="list-group-item">{business.location && business.location.display_address.join(', ')}</li>
+            <li class="list-group-item">{business.price}</li>
+            <li class="list-group-item">{business.transactions}</li>
           </ul>
         </p>
       </>
