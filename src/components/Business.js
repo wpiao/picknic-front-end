@@ -1,12 +1,14 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 class Business extends React.Component {
   handleClick = () => {
-    const id = this.props.business.id
-    this.props.handleShowcard(id);
-    this.props.history.push(`/business/${id}`)
+    if (this.props.history.location.pathname !== "/profile") {
+      const id = this.props.business.id;
+      this.props.handleShowcard(id);
+      this.props.history.push(`/business/${id}`);
+    }
   }
 
   render() {
