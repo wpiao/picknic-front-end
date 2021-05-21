@@ -11,8 +11,8 @@ class Profile extends React.Component {
   render() {
     return (
       <Container>
-          <div>
-          <h1 className="my-3">My Favorite Restaurants</h1>
+        <div>
+          <h1 className="py-3">My Favorite Restaurants</h1>
           <CardColumns>
             {this.props.savedBusinesses.map((business, i) =>
               <Business
@@ -22,8 +22,8 @@ class Profile extends React.Component {
                 handleDelete={this.props.handleDelete}
               />)}
           </CardColumns>
-      </div>
-        </Container>
+        </div>
+      </Container>
     )
   }
 }

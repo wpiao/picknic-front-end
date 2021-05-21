@@ -26,6 +26,7 @@ class Main extends React.Component {
             <BusinessDetail
               business={this.props.business}
               handleSave={this.props.handleSave}
+              isAuthenticated={this.props.isAuthenticated}
             />
           </Route>
           {this.props.isAuthenticated ?

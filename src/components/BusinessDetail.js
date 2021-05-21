@@ -6,11 +6,14 @@ import BusinessInfo from './BusinessInfo';
 class BusinessDetail extends React.Component {
   render() {
     return (
-      <Container>
+      <Container style={{ textAlign: "center" }}>
         <BusinessCarousel business={this.props.business} />
-        <br/>
-        <Button className="primary" onClick={this.props.handleSave}>Save</Button>
-        <BusinessInfo business={this.props.business}/>
+        <br />
+        {this.props.isAuthenticated ?
+          <Button className="px-5" variant="primary" onClick={this.props.handleSave}>Save</Button>
+          : ''
+        }
+        <BusinessInfo business={this.props.business} />
       </Container>
     )
   }
