@@ -8,6 +8,13 @@ The concept of this project is to have the user search and save a list of their 
 
 ## How to start the app
 
+1. Clone the repo
+2. Run command `npm i` to install the dependencies
+3. Create .env file in the root folder
+4. In .env file, set the following variables for development:
+   - `REACT_APP_BACKEND_URL=http://localhost:5000`
+5. Run command `npm start` to start the app
+
 ## User Stories
 
 [Trello Link](https://trello.com/b/YCSNFquJ/picknic)
@@ -36,3 +43,10 @@ The concept of this project is to have the user search and save a list of their 
 ## Team Agreement
 
 [Team Agreement](./team-agreement.md)
+
+## Resources
+
+- [Frontend repo URL](https://github.com/wpiao/picknic-front-end)
+- [Backend repo URL](https://github.com/wpiao/picknic-back-end)
+- [Frontend Live URL](https://picknic.club)
+- [Backend Live URL](https://picknic-back-end.herokuapp.com/)
