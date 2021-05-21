@@ -1,21 +1,19 @@
 import React from 'react';
+import { ListGroup } from 'react-bootstrap';
 
 class BusinessInfo extends React.Component {
   render() {
     const business = this.props.business;
-    console.log('This is BusinessInfo', business);
     return (
       <>
-        <h1>Hello from BusinessInfo</h1>
-        <p>
-          <ul>
-            <li>{business.name}</li>
-            <li>{business.display_phone}</li>
-            <li>{business.location && business.location.display_address.join(', ')}</li>
-            <li>{business.price}</li>
-            <li>{business.transactions}</li>
-          </ul>
-        </p>
+        <ListGroup variant="flush" className="mt-3" style={{ textAlign: "left" }}>
+          <ListGroup.Item><b>{business.name}</b></ListGroup.Item>
+          <ListGroup.Item>{business.display_phone}</ListGroup.Item>
+          <ListGroup.Item>{business.location && business.location.display_address.join(', ')}</ListGroup.Item>
+          <ListGroup.Item>Price: {business.price}</ListGroup.Item>
+          <ListGroup.Item>Yelp Rating: {business.rating}</ListGroup.Item>
+          <ListGroup.Item>Reviews counts: {business.review_count}</ListGroup.Item>
+        </ListGroup>
       </>
     )
   }

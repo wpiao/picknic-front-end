@@ -11,16 +11,18 @@ class Profile extends React.Component {
   render() {
     return (
       <Container>
-        <h1 className="my-3">My Favorite Restaurants</h1>
-        <CardColumns>
-          {this.props.savedBusinesses.map((business, i) =>
-            <Business
-              key={i}
-              business={business}
-              handleShowcard={this.props.handleShowcard}
-              handleDelete={this.props.handleDelete}
-            />)}
-        </CardColumns>
+        <div>
+          <h1 className="py-3">My Favorite Restaurants</h1>
+          <CardColumns>
+            {this.props.savedBusinesses.map((business, i) =>
+              <Business
+                key={i}
+                business={business}
+                handleShowcard={this.props.handleShowcard}
+                handleDelete={this.props.handleDelete}
+              />)}
+          </CardColumns>
+        </div>
       </Container>
     )
   }

@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+main {
+  background-color: rgb(44, 153, 184);
+}
+
+.Card.Img {
+  display: flex;
+}
